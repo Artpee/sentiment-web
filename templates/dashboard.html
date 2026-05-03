@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="header">Dashboard</div>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/">🏠 Home</a>
+        <a href="/about">📌 แนะนำโครงงาน</a>
+        <a href="/product">🛒 ข้อมูลสินค้า</a>
+        <a href="/creator">👤 ผู้จัดทำ</a>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- 🔥 Summary Cards -->
+        <div class="summary-grid">
+
+            <div class="summary-card">
+                <h4>Total Reviews</h4>
+                <h2>10,000</h2>
+            </div>
+
+            <div class="summary-card positive">
+                <h4>Positive</h4>
+                <h2>73%</h2>
+            </div>
+
+            <div class="summary-card neutral">
+                <h4>Neutral</h4>
+                <h2>15%</h2>
+            </div>
+
+            <div class="summary-card negative">
+                <h4>Negative</h4>
+                <h2>12%</h2>
+            </div>
+
+        </div>
+
+        <!-- 📊 รูปที่ 1 -->
+        <div class="box">
+            <h2>📊 ภาพรวมข้อมูล (Data Overview)</h2>
+            <img src="{{ url_for('static', filename='img/OverReviews.png') }}" class="dashboard-img">
+        </div>
+
+        <!-- 🤖 รูปที่ 2 -->
+        <div class="box">
+            <h2>🤖 ผลลัพธ์โมเดล (Model Performance)</h2>
+            <img src="{{ url_for('static', filename='img/Scoring.png') }}" class="dashboard-img">
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

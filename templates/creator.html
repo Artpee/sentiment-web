@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ผู้จัดทำ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="header">ข้อมูลผู้จัดทำ</div>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/">🏠 Home</a>
+        <a href="/about">📌 แนะนำโครงงาน</a>
+        <a href="/dashboard">📊 Dashboard</a>
+        <a href="/product">🛒 สินค้า</a>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <div class="creator-container">
+
+            <!-- 👤 ผู้จัดทำ -->
+            <div class="creator-card">
+                
+                <!-- รูป -->
+                <img src="{{ url_for('static', filename='img/creator.jpg') }}" class="profile-img">
+
+                <h2>ผู้จัดทำโครงงาน</h2>
+                <p><strong>ชื่อ:</strong> นาย วัชรากร เทพจา</p>
+                <p><strong>รหัสนักศึกษา:</strong> 66541207078-1</p>
+            </div>
+
+            <!-- 👩‍🏫 อาจารย์ -->
+            <div class="creator-card">
+                
+                <!-- รูป -->
+                <img src="{{ url_for('static', filename='img/creator1.jpg') }}" class="profile-img">
+
+                <h2>อาจารย์ที่ปรึกษา</h2>
+                <p><strong>ชื่อ:</strong> ผู้ช่วยศาสตราจารย์ หฤทัย อาษากิจ</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

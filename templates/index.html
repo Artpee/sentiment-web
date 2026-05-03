@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Homepage</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- 🎬 INTRO -->
+<div id="intro">
+    <h1 class="intro-text">PROJECT</h1>
+</div>
+
+<!-- 🔥 MAIN -->
+<div id="main-content" style="display:none;">
+
+    <!-- HEADER -->
+    <div class="header">SENTIMENT ANALYSIS SYSTEM</div>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <a href="/about">📌 แนะนำโครงงาน</a>
+            <a href="/dashboard">📊 Dashboard</a>
+            <a href="/product">🛒 ข้อมูลสินค้า</a>
+            <a href="/creator">👤 ผู้จัดทำ</a>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="main">
+
+            <!-- HERO -->
+            <div class="hero">
+                <h1>ยินดีต้อนรับ</h1>
+                <p>ระบบวิเคราะห์ความคิดเห็นของผู้บริโภคจากรีวิวสินค้า</p>
+            </div>
+
+            <!-- CARD STATS -->
+            <div class="stats">
+                <div class="card">📊 วิเคราะห์ข้อมูล</div>
+                <div class="card">🤖 Machine Learning</div>
+                <div class="card">🛍️ รีวิวสินค้า</div>
+            </div>
+
+            <!-- AI BOX -->
+            <div class="ai-box">
+    <h2>วิเคราะห์รีวิวสินค้า</h2>
+
+    <textarea id="text" placeholder="พิมพ์รีวิว..."></textarea>
+
+    <button onclick="predict()">วิเคราะห์</button>
+
+    <div id="result"></div>
+</div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script>
+setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+}, 2000);
+</script>
+<script>
+function predict() {
+    let text = document.getElementById("text").value;
+
+    fetch("/predict", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({text: text})
+    })
+    .then(res => res.json())
+    .then(data => {
+        let html = "<h3>ผลลัพธ์: " + data.prediction + "</h3>";
+
+        for (let key in data.confidence) {
+            html += key + ": " + (data.confidence[key]*100).toFixed(2) + "%<br>";
+        }
+
+        document.getElementById("result").innerHTML = html;
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ข้อมูลสินค้า</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="header">ข้อมูลสินค้า</div>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/">🏠 Home</a>
+        <a href="/about">📌 แนะนำโครงงาน</a>
+        <a href="/dashboard">📊 Dashboard</a>
+        <a href="/creator">👤 ผู้จัดทำ</a>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+       <div class="product-grid">
+
+    <!-- สินค้า 1 -->
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='img/amezon1.jpg') }}">
+        <h3>เสื้อผู้หญิง</h3>
+        <p>ผ้าริบลายกว้างเนื้อเจอร์ซีย์ผสมคอตตอน–โมดัล สัมผัสนุ่มมาก พร้อมความยืดหยุ่น ช่วยให้สวมใส่สบายตลอดวัน และยังคงรูปทรงได้ดี เพื่อให้ได้ทรงสลิมฟิตที่พอดีสวย</p>
+        <button>$10.70</button>
+    </div>
+
+    <!-- สินค้า 2 -->
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='img/amezon2.jpg') }}">
+        <h3>ที่ขัดฟันอัตโนมัติ </h3>
+        <p>ขจัดคราบพลัคได้แรงขึ้น 7 เท่า ด้วยมอเตอร์ทรงพลัง เข้าถึงซอกลึกแนวเหงือกและฟันกรามได้ดีขึ้น กำจัดพลัคได้มากกว่าแปรงธรรมดาสูงสุด 125% เพื่อรอยยิ้มสะอาดสุขภาพดี</p>
+        <button>$25.98</button>
+    </div>
+
+    <!-- สินค้า 3 -->
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='img/amezon3.jpg') }}">
+        <h3>ไม้ถูพื้น</h3>
+        <p>ชุดไม้ถูพื้นพร้อมถังบีบน้ำ JOYMOOP แบบ 2 ถัง (พร้อมตัวบีบน้ำ) เป็นระบบแยกถัง ซัก และ แห้ง:
+
+ใน ช่องซัก ช่วยขจัดคราบและสิ่งสกปรกออกจากผ้าม็อบ
+ใน ช่องแห้ง ช่วยบีบน้ำออกให้หมาด
+ใช้งานได้แบบ ไม่ต้องใช้มือสัมผัส ทำความสะอาดสะดวกพร้อมถัง</p>
+        <button>$33.99</button>
+    </div>
+
+    <!-- สินค้า 4 -->
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='img/amezon4.jpg') }}">
+        <h3>ชุดฝาปิดกล่องอาหาร</h3>
+        <p>ฝาปิด สุญญากาศ/แน่นสนิท กันหก-กันรั่ว เก็บวัตถุดิบหรือของเหลือได้ง่าย และชาม 3.5qt มีฝาช่องเล็กไว้เติมของได้โดยไม่ต้องเปิดทั้งฝา ลดการกระเด็น พร้อม หัวขูด 3 แบบ (สไลซ์/ขูด/ฝอย) ขูดหรือสไลซ์ลงชามได้เลย.</p>
+        <button>$35.99</button>
+    </div>
+
+    <!-- สินค้า 5 -->
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='img/amezon5.jpg') }}">
+        <h3>กล่องใส่ผ้า</h3>
+        <p>ถุงจัดเก็บขนาดใหญ่ 23×16×13 นิ้ว (60×42×36 ซม.) จุได้ 90 ลิตร เหมาะสำหรับเดินทาง ใส่ได้สบายทั้ง ผ้าปูที่นอน ผ้านวม ผ้าห่ม หมอน ของเล่น เสื้อแจ็กเก็ต และเสื้อผ้าอื่นๆ ได้เยอะครับ</p>
+        <button>$18.99</button>
+    </div>
+
+    <!-- สินค้า 6 -->
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='img/amezon6.jpg') }}">
+        <h3>โคมไฟตอนกลางคืน</h3>
+        <p>ไฟกลางคืนเซ็นเซอร์แสง เปิดอัตโนมัติเมื่อมืด (เปิดตอนหัวค่ำ / ปิดตอนเช้า) เหมาะสำหรับช่วยนำทางกิจวัตรช่วงกลางคืน</p>
+        <button>$8.44</button>
+    </div>
+
+    <!-- สินค้า 7 -->
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='img/amezon7.jpg') }}">
+        <h3>ที่วางโทรศัพท์์</h3>
+        <p>องรับ Apple Find My ในตัว ไม่ต้องใช้ AirTag ตั้งค่าตำแหน่งเรียลไทม์/สั่งให้ดัง/แจ้งเตือนลืมไว้/โหมดสูญหาย ระยะบลูทูธ 50 ม. เสียงเตือน 100 dB</p>
+        <button>$33.99 </button>
+    </div>
+
+    <!-- สินค้า 8 -->
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='img/amezon8.jpg') }}">
+        <h3>หลอดไฟ</h3>
+        <p>ควบคุมหลอดไฟอัจฉริยะ Amazon Basics ได้สะดวกและประหยัดพลังงาน สั่งงานด้วยเสียงหรือผ่านแอป Alexa ไม่ต้องเดินกดสวิตช์เอง ตั้ง ตาราง/รูทีน เปิด–ปิดอัตโนมัติตาม พระอาทิตย์ขึ้น–ตก ช่วยลดการใช้ไฟ รองรับเฉพาะ Alexa ไม่รองรับ Google Assistant, Apple HomeKit และ SmartThings.</p>
+        <button>$8.55</button>
+    </div>
+
+    <!-- สินค้า 9 -->
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='img/amezon9.jpg') }}">
+        <h3>รองเท้าผู้หญิง</h3>
+        <p>รองเท้าแตะสไลด์ใส่สบายและกระชับ มี ยางยืดซ่อน ช่วยให้พอดีเท้า แผ่นรองนุ่มด้วย โฟมลาเท็กซ์ เพิ่มความสบาย และพื้นรองเท้า ยืดหยุ่น แข็งแรงทนทาน</p>
+        <button>$18.43</button>
+    </div>
+
+    <!-- สินค้า 10 -->
+    <div class="product-card">
+        <img src="{{ url_for('static', filename='img/amezon10.jpg') }}">
+        <h3>ผ้าอนามัย</h3>
+        <p>แผ่นอนามัย ซึมซับสูงพิเศษ ปกป้องการรั่วซึมได้นานสูงสุด 11 ชั่วโมง ด้วยแกนซึมซับที่ช่วยกักเก็บความชื้นไว้ภายใน</p>
+        <button> $5.26</button>
+    </div>
+
+</div>
+
+</body>
+</html>
