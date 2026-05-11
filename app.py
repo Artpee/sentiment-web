@@ -14,8 +14,11 @@ def about():
 
 # หน้า dashboard
 @app.route("/dashboard")
-def dashboard():
-    return render_template("dashboard.html")
+def dashboard(
+     total_reviews = f"{10000:,}"
+):
+    return render_template("dashboard.html", total_reviews=total_reviews)
+
 
 # หน้าสินค้า
 import pandas as pd
@@ -46,4 +49,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    app.run(host="0.0.0.0", port=5000)
+    app.run(debug=True)
